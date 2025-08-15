@@ -1,0 +1,88 @@
+<div class="email-container"
+    style="padding: 20px 0; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background-color: #f8fafc; min-height: 100vh; display: flex; align-items: center; justify-content: center;">
+    <table width="100%"
+        style="max-width: 640px; width: 100%; margin: auto; background: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,0.05); border: 1px solid #e2e8f0;">
+        <!-- Media query pour les écrans plus grands -->
+        <style>
+            @media (min-width: 768px) {
+                .email-container {
+                    padding: 40px 0 !important;
+                }
+
+                .email-content {
+                    padding: 48px 40px !important;
+                }
+
+                .email-title {
+                    font-size: 24px !important;
+                    margin-bottom: 28px !important;
+                }
+
+                .whatsapp-button {
+                    max-width: 320px !important;
+                    padding: 16px 32px !important;
+                }
+            }
+
+            /* Media query pour mobile - layout vertical */
+            @media (max-width: 767px) {
+                .profile-section {
+                    flex-direction: column !important;
+                    align-items: center !important;
+                    text-align: center !important;
+                }
+
+                .profile-image {
+                    margin-right: 0 !important;
+                    margin-bottom: 20px !important;
+                }
+
+                .profile-message {
+                    width: 100% !important;
+                }
+            }
+        </style>
+
+        <!-- Contenu principal -->
+        <tr>
+            <td class="email-content" style="padding: 24px 20px; color: #334155; font-size: 16px; line-height: 1.75;">
+                <h2 class="email-title"
+                    style="font-size: 20px; font-weight: 600; margin-bottom: 24px; color: #1e293b; letter-spacing: -0.5px; text-align: center;">
+                    ✨ Hello Karma</h2>
+
+                <!-- Message personnalisé avec image de profil -->
+                <div class="profile-section"
+                    style="display: flex; flex-direction: row; justify-content: space-between; align-items: flex-start; margin-bottom: 32px; text-align: left;">
+                    <!-- Image de profil à gauche -->
+                    <div class="profile-image" style="margin-right: 20px; flex-shrink: 0;">
+                        <img src="https://gytx.dev/assets/icons/karmacbridges.png" alt="Profil Karma"
+                            style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 2px solid #e2e8f0;" />
+                    </div>
+
+                    <!-- Message à droite -->
+                    <div class="profile-message" style="flex: 1;">
+                        <p style="margin: 0 0 16px 0; font-size: 16px; line-height: 1.6;">
+                            I hope you are Okay, it's just a salut.<br><br>
+                            En fait tu vois hier j'étais sur TikTok et bim je tombe sur ton compte TikTok for the first
+                            time<br>
+                            C'était juste un salut, j'espère que tu vas bien !<br>
+                            Nathan from Libreville I'm 22
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Bouton principal avec micro-interaction au survol -->
+                <div style="margin: 32px 0; text-align: center;">
+                    <a href="https://wa.me/24105389340" class="whatsapp-button"
+                        style="display: inline-block; width: 100%; max-width: 280px; padding: 16px 24px; background-color: #128C7E; color: white; font-weight: 600; text-decoration: none; border-radius: 8px; transition: all 0.2s ease; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06); box-sizing: border-box;"
+                        onmouseover="this.style.backgroundColor='#128C7E'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05)';"
+                        onmouseout="this.style.backgroundColor='#128C7E'; this.style.transform='none'; this.style.boxShadow='0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06)';">
+                        <img src="https://gytx.dev/assets/icons/whatsapp.png" alt="WhatsApp"
+                            style="width: 20px; height: 20px; vertical-align: middle; margin-right: 8px;" />
+                        Chat me on WhatsApp
+                    </a>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
