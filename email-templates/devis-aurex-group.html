@@ -60,7 +60,7 @@
                                 </table>
                             </td>
                             <td style="vertical-align: top;">
-                                <p style="font-weight: 600; color: #1e293b; margin: 0 0 4px 0;">Développement complet du
+                                <p style="font-weight: 600; color: #1e293b; margin: 0 0 2px 0;">Développement complet du
                                     site</p>
                                 <p style="margin: 0; font-size: 14px; color: #64748b;">Frontend Vue.js + Next.js,
                                     Backend Supabase</p>
@@ -84,7 +84,7 @@
                                 </table>
                             </td>
                             <td style="vertical-align: top;">
-                                <p style="font-weight: 600; color: #1e293b; margin: 0 0 4px 0;">Intégration des moyens
+                                <p style="font-weight: 600; color: #1e293b; margin: 0 0 2px 0;">Intégration des moyens
                                     de paiement</p>
                                 <p style="margin: 0; font-size: 14px; color: #64748b;">Airtel Money, Moov Money, Visa
                                 </p>
@@ -108,7 +108,7 @@
                                 </table>
                             </td>
                             <td style="vertical-align: top;">
-                                <p style="font-weight: 600; color: #1e293b; margin: 0 0 4px 0;">Hébergement, déploiement
+                                <p style="font-weight: 600; color: #1e293b; margin: 0 0 2px 0;">Hébergement, déploiement
                                     et tests</p>
                                 <p style="margin: 0; font-size: 14px; color: #64748b;">Configuration complète et mise en
                                     production</p>
@@ -132,7 +132,7 @@
                                 </table>
                             </td>
                             <td style="vertical-align: top;">
-                                <p style="font-weight: 600; color: #1e293b; margin: 0 0 4px 0;">Maintenance & support
+                                <p style="font-weight: 600; color: #1e293b; margin: 0 0 2px 0;">Maintenance & support
                                     technique</p>
                                 <p style="margin: 0; font-size: 14px; color: #64748b;">3 mois après la mise en ligne</p>
                             </td>
@@ -207,8 +207,26 @@
 
                     <!-- Coordonnées dans une carte -->
                     <div style="background: #f8fafc; border-radius: 8px; padding: 20px; border: 1px solid #e2e8f0;">
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;">
-                            <div>
+                        <!-- Version Desktop (2 colonnes) -->
+                        <table width="100%" cellspacing="0" cellpadding="0" style="margin-bottom: 16px;"
+                            class="desktop-only">
+                            <tr>
+                                <td width="50%" style="vertical-align: top; padding-right: 8px;">
+                                    <p style="font-weight: 600; color: #1e40af; margin: 0 0 4px 0; font-size: 14px;">📱
+                                        Téléphone</p>
+                                    <p style="margin: 0; color: #475569; font-size: 14px;">+241 04 00 12 09</p>
+                                </td>
+                                <td width="50%" style="vertical-align: top; padding-left: 8px;">
+                                    <p style="font-weight: 600; color: #1e40af; margin: 0 0 4px 0; font-size: 14px;">📧
+                                        Email</p>
+                                    <p style="margin: 0; color: #475569; font-size: 14px;">n.leyalangoye@gytx.dev</p>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <!-- Version Mobile (1 colonne) - Cachée par défaut -->
+                        <div class="mobile-only" style="display: none; margin-bottom: 16px;">
+                            <div style="margin-bottom: 12px;">
                                 <p style="font-weight: 600; color: #1e40af; margin: 0 0 4px 0; font-size: 14px;">📱
                                     Téléphone</p>
                                 <p style="margin: 0; color: #475569; font-size: 14px;">+241 04 00 12 09</p>
@@ -219,12 +237,26 @@
                                 <p style="margin: 0; color: #475569; font-size: 14px;">n.leyalangoye@gytx.dev</p>
                             </div>
                         </div>
+
                         <div style="text-align: center;">
                             <p style="margin: 0; font-weight: 600; color: #1e40af; font-size: 16px;">
                                 🌐 <a href="https://gytx.dev"
                                     style="color: #1e40af; text-decoration: none;">gytx.dev</a>
                             </p>
                         </div>
+
+                        <!-- Media Query pour responsive -->
+                        <style>
+                            @media only screen and (max-width: 600px) {
+                                .desktop-only {
+                                    display: none !important;
+                                }
+
+                                .mobile-only {
+                                    display: block !important;
+                                }
+                            }
+                        </style>
                     </div>
                 </div>
             </td>

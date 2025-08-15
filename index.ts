@@ -2,7 +2,12 @@ import { Resend } from 'resend';
 import { readFileSync } from 'fs';
 import { join } from 'path';
 
-const resend = new Resend('re_Zq2tDt23_JFzrSgTPiZCe5Kyp7unofZSc');
+// Utilisation de la variable d'environnement pour sécuriser la clé API
+if (!process.env.RESEND_API_KEY) {
+    throw new Error('RESEND_API_KEY n\'est pas définie dans les variables d\'environnement');
+}
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 function generateEmailHtml() {
     try {
@@ -28,7 +33,7 @@ async function sendEmail() {
             html,
         });
         console.log('Email envoyé avec succès :', data);
-} catch (error: any) {
+    } catch (error: any) {
         console.error('Erreur lors de l\'envoi de l\'email :', error?.message || error);
     }
 }
