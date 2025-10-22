@@ -2,15 +2,25 @@
   "name": "resend-node-example",
   "private": true,
   "scripts": {
-    "dev": "ts-node index.ts"
+    "dev": "ts-node index.ts",
+    "wireframes": "ts-node wireframes-reader.ts",
+    "wireframes-manual": "ts-node wireframes-manual.ts",
+    "wireframes-advanced": "ts-node wireframes-advanced.ts",
+    "wireframes-final": "ts-node wireframes-final.ts",
+    "wireframes-real": "ts-node wireframes-real.ts"
   },
   "dependencies": {
     "@types/express": "^5.0.3",
+    "dotenv": "^17.2.1",
     "express": "^4.21.2",
-    "resend": "*"
+    "resend": "*",
+    "axios": "^1.6.0",
+    "cheerio": "^1.0.0-rc.12",
+    "fs-extra": "^11.1.1"
   },
   "devDependencies": {
     "@types/node": "^20.2.5",
+    "@types/fs-extra": "^11.0.4",
     "ts-node": "^10.9.1",
     "typescript": "^5.1.3"
   }

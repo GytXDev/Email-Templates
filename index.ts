@@ -1,6 +1,10 @@
+import dotenv from 'dotenv';
 import { Resend } from 'resend';
 import { readFileSync } from 'fs';
 import { join } from 'path';
+
+// Charger les variables d'environnement depuis le fichier .env
+dotenv.config();
 
 // Utilisation de la variable d'environnement pour sécuriser la clé API
 if (!process.env.RESEND_API_KEY) {
@@ -12,7 +16,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 function generateEmailHtml() {
     try {
         // Lire le contenu du fichier karmacbridges.html
-        const templatePath = join(__dirname, 'email-templates/devis-aurex-group.html');
+        const templatePath = join(__dirname, 'email-templates/wireframes-pogup-conciergerie.html');
         const htmlContent = readFileSync(templatePath, 'utf-8');
 
         // Remplacer la variable de date dynamique
@@ -27,9 +31,9 @@ async function sendEmail() {
     const html = generateEmailHtml();
     try {
         const data = await resend.emails.send({
-            from: 'GytX Developer <developer@gytx.dev>',
-            to: ['mahelnguindja@gmail.com'],
-            subject: 'Devis Aurex Group',
+            from: 'Japhet LEYALANGOYE <n.leyalangoye@gytx.dev>',
+            to: ['matsahanga2017@gmail.com'],
+            subject: 'Wireframes Pog\'Up Conciergerie',
             html,
         });
         console.log('Email envoyé avec succès :', data);
