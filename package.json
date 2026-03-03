@@ -7,7 +7,8 @@
     "wireframes-manual": "ts-node wireframes-manual.ts",
     "wireframes-advanced": "ts-node wireframes-advanced.ts",
     "wireframes-final": "ts-node wireframes-final.ts",
-    "wireframes-real": "ts-node wireframes-real.ts"
+    "wireframes-real": "ts-node wireframes-real.ts",
+    "send-pulse": "ts-node send-pulse-emails.ts"
   },
   "dependencies": {
     "@types/express": "^5.0.3",
